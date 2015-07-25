@@ -17,6 +17,7 @@ import traceback
 import time
 
 # Genymotion Android VM name
+sleepTime = 6
 minK = 180
 vbox = virtualbox.VirtualBox()
 genymotion_vm_name = ""
@@ -32,7 +33,8 @@ def getMenu():
  result += "2. Auto Search\n"
  result += "3. Change Minimum K to stop ["+str(minK)+"]\n"
  result += "4. Change vm ["+genymotion_vm_name+"]\n"
- result += "5. Quit\n"
+ result += "5. Change sleepTime ["+str(sleepTime)+"]\n"
+ result += "6. Quit\n"
  return result
 
 
@@ -61,7 +63,7 @@ def auto_search():
     # click search button
     print "Next"
     click(660,300)
-    sleep(6)
+    sleep(sleepTime)
 
     ts = time.time()
     #destImg = "/tmp/coc/screens/"+genymotion_vm_name+"-"+str(ts)+"-screen.png"
@@ -147,6 +149,8 @@ if __name__ == "__main__":
                     i=i+1
                 selectVM(genymotion_vm_name)
             elif answer == "5":
+                sleepTime = int(raw_input("Enter new sleepTime (old : "+str(sleepTime)+"): "))
+            elif answer == "6":
                 sys.exit(0)
     except KeyboardInterrupt:
       print "\nKeyboardInterrupt\nExit"
