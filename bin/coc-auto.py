@@ -26,6 +26,8 @@ soundFile = scriptDir + "/../sound/Gun_Shot-Marvin-1140816320.mp3"
 tessdataPrefix = scriptDir + "/../"
 
 
+def getTime():
+  return time.strftime("%d/%m/%Y %H:%M:%S")
 
 def getMenu():
  result = "Choose function?\n"
@@ -46,7 +48,7 @@ def selectVM(genymotion_vm_name):
 
 def click(x,y):
   global genymotion_session
-  ts = time.time()
+  ts = getTime()
   genymotion_session.console.mouse.put_mouse_event_absolute(x,y,0,0,0)
   genymotion_session.console.mouse.put_mouse_event_absolute(x,y,0,0,1)
   genymotion_session.console.mouse.put_mouse_event_absolute(x,y,0,0,0)
