@@ -131,7 +131,7 @@ if __name__ == "__main__":
                 except:
                     pass
             elif answer == "3":
-                minK = raw_input("Enter new minimum K to stop (old : "+str(minK)+"): ")
+                minK = int(raw_input("Enter new minimum K to stop (old : "+str(minK)+"): "))
             elif answer == "4":
                 print "VM List :"
                 i=1
