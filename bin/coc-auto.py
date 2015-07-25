@@ -79,7 +79,7 @@ def auto_search():
     loot = im.crop(box).convert('L')
     loot = ImageOps.invert(loot)
     loot.save(destLoot, "png")
-    subprocess.call("convert "+destLoot+" -white-threshold 15% "+destLoot, shell=True)
+    subprocess.call("convert "+destLoot+" -white-threshold 18% "+destLoot, shell=True)
 
     api = tesseract.TessBaseAPI()
     api.Init(tessdataPrefix, "coc",tesseract.OEM_DEFAULT)
