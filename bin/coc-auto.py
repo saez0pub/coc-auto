@@ -21,8 +21,8 @@ minK = 180
 vbox = virtualbox.VirtualBox()
 genymotion_vm_name = ""
 scriptDir = os.path.dirname(os.path.realpath(__file__))
-soundFile = scriptDir + "/sound/Gun_Shot-Marvin-1140816320.mp3"
-tessdataPrefix = scriptDir
+soundFile = scriptDir + "/../sound/Gun_Shot-Marvin-1140816320.mp3"
+tessdataPrefix = scriptDir + "/../"
 
 
 
